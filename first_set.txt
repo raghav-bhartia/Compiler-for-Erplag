@@ -1,0 +1,51 @@
+0 program -> { DECLARE DEF DRIVERDEF }
+1 moduleDeclarations -> { DECLARE epsilon }
+2 moduleDeclaration -> { DECLARE }
+3 otherModules -> { DEF epsilon }
+4 driverModule -> { DRIVERDEF }
+5 module -> { DEF }
+6 ret -> { RETURNS epsilon }
+7 input_plist -> { ID }
+8 N1 -> { COMMA epsilon }
+9 output_plist -> { ID }
+10 N2 -> { COMMA epsilon }
+11 dataType -> { INTEGER REAL BOOLEAN ARRAY }
+12 type -> { INTEGER REAL BOOLEAN }
+13 moduleDef -> { START }
+14 statements -> { GET_VALUE PRINT ID SQBO USE DECLARE SWITCH FOR WHILE epsilon }
+15 statement -> { GET_VALUE PRINT ID SQBO USE DECLARE SWITCH FOR WHILE }
+16 ioStmt -> { GET_VALUE PRINT }
+17 var -> { ID NUM RNUM }
+18 whichId -> { SQBO epsilon }
+19 simpleStmt -> { ID SQBO USE }
+20 assignmentStmt -> { ID }
+21 whichStmt -> { ASSIGNOP SQBO }
+22 lvalueIDStmt -> { ASSIGNOP }
+23 lvalueARRStmt -> { SQBO }
+24 index -> { NUM ID }
+25 moduleReuseStmt -> { SQBO USE }
+26 optional -> { SQBO epsilon }
+27 idlist -> { ID }
+28 N3 -> { COMMA epsilon }
+29 expression -> { ID NUM RNUM BO MINUS }
+30 arithmeticOrBooleanExpr -> { ID NUM RNUM BO }
+31 N7 -> { AND OR epsilon }
+32 AnyTerm -> { ID NUM RNUM BO }
+33 N8 -> { LT LE GT GE EQ NE epsilon }
+34 arithmeticExpr -> { ID NUM RNUM BO }
+35 N4 -> { PLUS MINUS epsilon }
+36 term -> { ID NUM RNUM BO }
+37 N5 -> { MUL DIV epsilon }
+38 factor -> { ID NUM RNUM BO }
+39 op1 -> { PLUS MINUS }
+40 op2 -> { MUL DIV }
+41 logicalOp -> { AND OR }
+42 relationalOp -> { LT LE GT GE EQ NE }
+43 declareStmt -> { DECLARE }
+44 condionalStmt -> { SWITCH }
+45 caseStmts -> { CASE }
+46 N9 -> { CASE epsilon }
+47 value -> { NUM TRUE FALSE }
+48 default1 -> { DEFAULT epsilon }
+49 iterativeStmt -> { FOR WHILE }
+50 range -> { NUM }

@@ -1,0 +1,6 @@
+lexeme            type              module            lines             level             width             offset
+x                 INTEGER           driver            2 to 9            1                 2                 0
+y                 INTEGER           driver            2 to 9            1                 2                 2
+z                 INTEGER           driver            2 to 9            1                 2                 4
+arr               array(15,INTEGER) driver            2 to 9            1                 30                6
+sum               INTEGER           driver            2 to 9            1                 2                 36
